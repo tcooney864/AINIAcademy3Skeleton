@@ -1,0 +1,31 @@
+﻿<h2>Our Azoore!</h2>
+<h4>Upload an image URL of an animal for Microsoft Azure's AI to look at!</h4>
+<h4>We will use the AI's output to determine where we will put the animal.</h4>
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Index" enctype="multipart/form-data">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="urlInput">Image URL</label>
+                    <input type="text" name="urlInput" id="urlInput" class="form-control">
+                    <p class="help-block">There are a set of URLs contained within this project that you can use</p>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Upload" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Original Image</h4>
+        <img src="@ViewData["originalImage"]" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Result</h4>
+        <label>@ViewData["result"]</label>
+    </div>
+</div>
